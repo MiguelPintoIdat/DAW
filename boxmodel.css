@@ -1,0 +1,16 @@
+
+#DivPadre{
+    background:yellow;
+    height: 300px;
+    width: 300px;
+    border:2px solid;
+    margin:20px 0px 0px 50px;
+    padding: 50px;
+}
+
+#DivHijo{
+    background: red;
+    height: 150px;
+    width: 150px;
+    border:2px solid;
+}

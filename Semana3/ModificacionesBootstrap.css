@@ -1,0 +1,27 @@
+.form-label{
+    color:red;
+}
+
+.h-200{
+    height: 200px;
+}
+.h-500{
+    height: 500px;
+}
+.h-800{
+    height: 800px;
+}
+
+/*
+-> Formulario
+-> 12 Campos (Label + Input)
+-> Pantalla Grande: 
+        4 Campos por fila
+-> Pantalla Mediana: 
+        3 Campos por fila
+----> Pantalla small: 
+        2 campos por fila ***
+-> Pantalla Celular: 
+        1 campo por fla
+
+*/

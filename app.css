@@ -1,0 +1,82 @@
+
+/*
+Aplicar estilo a una etiqueta en general
+*/
+div{
+    background: red;
+}
+
+/*
+Aplicar estilo a través del ID
+*/
+
+#Parrafo1{
+      background: yellow;  
+}
+#Parrafo2{
+      background: black;  
+}
+/*
+Aplicar estilo a través del CLASS
+*/
+.ClaseParrafo{
+       background: orange;     
+}
+
+/*
+Aplicando pseudo-clase
+*/
+
+.ClaseParrafo:hover{
+    background: blue;  
+}
+
+/*
+Aplicando estilos a pseudo-elementos
+*/
+.ClaseParrafo::first-letter{
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+}
+
+/*
+Aplicando estilos según Atributo
+*/
+[AtributoCreado = "ParrafoPrueba"]{
+    font-size: 30px;
+}
+
+/*
+Aplicando a multiples selectores
+*/
+.ClaseParrafo , #Parrafo1{
+    font-weight: bold;
+}
+
+/* Aplicando estilos a un elemento dentro de un selector */
+
+.ClaseParrafo span{
+    color: white;
+}
+
+#Parrafo1 span{
+    color:red;
+}
+
+#Parrafo1 span:hover{
+    color:white;
+}
+
+/*
+
+    Crear 5 divs
+    Dentro de cada div una etiqueta p o más
+    Dentro de cada etiqueta p un span
+
+    Apliquen estilos utilizando Class, Id,
+    Utilizando Mulit-Selector,
+    Accediento a un hijo
+    Pseudo clase - Pseudo Elemento
+
+*/

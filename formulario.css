@@ -1,0 +1,27 @@
+.input-form{
+    border:1px solid rgba(178, 174, 174, 0.585);
+    border-radius: 5px;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-form:focus{
+    outline: none;
+    border:1.5px solid rgba(71, 119, 202, 0.585);
+}
+
+#boton-form{
+    background: rgb(186, 235, 255);
+    border:1px solid rgba(178, 174, 174, 0.585);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
