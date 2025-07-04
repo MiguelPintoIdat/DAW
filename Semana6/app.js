@@ -41,7 +41,7 @@ function CambiarAzul(){
 }
 
 function AlternarClases(){
-    
+
     var claseActual = $("#Contenedor").attr('class')
 
     if(claseActual.includes("ContenedorRojo")){
