@@ -12,9 +12,18 @@ const db = require('./db'); // importa la conexión
 const cors = require('cors');
 app.use(cors());
 
+//Devuelve un bool: true / false
 function esNumero(valor) {
   return !isNaN(valor) && isFinite(valor);
 }
+
+//Validar si está vacío
+function esVacio(valor){
+    return !valor;
+}
+
+//Validar si hay duplicado
+
 
 
 var respuesta = {
@@ -33,6 +42,7 @@ app.get('/', (req, res) => {
             return res.status(500).send('Error al hacer consulta');
         }else{
             lista = results;
+            console.log(lista.length);
             return res.status(200).json(lista);
         }
     });
@@ -41,6 +51,38 @@ app.get('/', (req, res) => {
 app.post('/Alumnos/Registrar', (req, res) => {
 
   const { nombre, apellido, edad} = req.body;
+
+    /* Validar duplicado */
+
+    const sql_dup = 'Select * From Alumnos Where Nombre = ?';
+    const values_dup = [nombre];
+
+    db.query(sql_dup, values_dup, (error,results) => {
+
+        if(error){
+            respuesta.correcto = false;
+            respuesta.mensaje = 'Error al insertar: ' + err;
+
+            return res.status(500).json(respuesta);
+        }else{
+            lista = results;
+            if(lista.length >= 1){
+                respuesta.correcto = false;
+                respuesta.mensaje = 'Ya existe un alumno con el nombre: ' + nombre;
+
+                return res.status(500).json(respuesta);   
+            }
+        }
+    });
+
+
+
+    if(esVacio(nombre)){
+        respuesta.correcto = false;
+        respuesta.mensaje = 'El campo nombre no debe estar vacío.';
+
+        return res.status(500).json(respuesta);           
+    }
 
     if(!esNumero(edad)){
 
